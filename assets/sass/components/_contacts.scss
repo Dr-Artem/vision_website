@@ -1,0 +1,84 @@
+.contacts {
+    &__title {
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 40px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 50px;
+        }
+    }
+    &__list {
+        max-width: 880px;
+    }
+    &__item {
+        color: var(--muted50-text-color);
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 40px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 50px;
+        }
+    }
+    &__item:nth-child(2) svg {
+        width: 30px;
+        height: 30px;
+    }
+    &__item:nth-child(3) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__item:last-child {
+        margin-bottom: 100px;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+        color: inherit;
+        font-weight: 200;
+        transition: color var(--general-transition-effect);
+
+        @media screen and (min-width: $tablet) {
+            font-size: 48px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 70px;
+        }
+    }
+    &__link:hover {
+        color: var(--main-text-color);
+    }
+    &__item:last-child &__link {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+
+        @media screen and (min-width: $tablet) {
+            text-decoration-thickness: 2px;
+        }
+    }
+    &__link svg {
+        display: block;
+        fill: currentColor;
+        width: 38px;
+        height: 38px;
+
+        @media screen and (min-width: $tablet) {
+            width: 52px;
+            height: 52px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 74px;
+            height: 74px;
+        }
+    }
+}

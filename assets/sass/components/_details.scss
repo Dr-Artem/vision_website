@@ -1,0 +1,90 @@
+.details {
+    &__header {
+        margin-bottom: 60px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 100px;
+        }
+    }
+    &__item {
+        display: flex;
+        gap: 15px;
+        border-radius: 3px;
+
+        @media screen and (min-width: $tablet) {
+            gap: 30px;
+        }
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 40px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 100px;
+        }
+    }
+    &__item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    &__item &__img {
+        border-radius: 3px;
+    }
+    &__item:nth-child(even) &__img {
+        grid-column: 2;
+    }
+    &__img img {
+        min-width: 150px;
+
+        @media screen and (min-width: $tablet) {
+            min-width: 300px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            min-width: 400px;
+        }
+    }
+    &__item:nth-child(even) &__title {
+        text-align: right;
+    }
+    &__title {
+        font-family: var(--accent-font);
+        text-transform: uppercase;
+        font-weight: 200;
+        margin-bottom: 15px;
+        font-size: 12px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+    }
+    &__item:nth-child(even) &__text {
+        margin-left: auto;
+        text-align: right;
+    }
+    &__text {
+        max-width: 400px;
+        font-size: 12px;
+        text-align: justify;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 20px;
+        }
+    }
+}

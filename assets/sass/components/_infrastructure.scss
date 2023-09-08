@@ -1,0 +1,67 @@
+.infrastructure {
+    &__header {
+        margin-bottom: 40px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 100px;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+        column-gap: 15px;
+
+        @media screen and (min-width: $tablet) {
+            row-gap: 80px;
+            column-gap: 25px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            row-gap: 100px;
+            column-gap: 40px;
+        }
+    }
+    &__img {
+        display: block;
+        margin-bottom: 20px;
+    }
+    &__title {
+        font-family: var(--accent-font);
+        text-transform: uppercase;
+        font-weight: 200;
+        margin-bottom: 15px;
+        font-size: 12px;
+        line-height: 18px;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 25px;
+        }
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 18px;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+}

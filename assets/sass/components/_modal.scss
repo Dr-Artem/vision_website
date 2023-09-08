@@ -1,0 +1,124 @@
+.modal {
+    max-width: 300px;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-background-color);
+    z-index: 100;
+    padding: 30px 30px;
+    border: 1px solid var(--black-background-color);
+    border-radius: 3px;
+
+    @media screen and (min-width: $tablet) {
+        padding: 50px 30px;
+        max-width: 700px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 50px 30px;
+        max-width: 980px;
+    }
+
+    &__backdrop {
+        position: fixed;
+        inset: 0;
+        backdrop-filter: blur(10px);
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    &__backdrop.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    &__text-wrapper {
+        margin-bottom: 35px;
+    }
+
+    &__text-wrapper li:not(:last-child) &__text--muted {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 16px;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    &__text--muted {
+        color: var(--muted50-text-color);
+    }
+
+    &__text span {
+        font-family: var(--bold-font);
+        color: var(--accent-text-color);
+    }
+
+    &__contact-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+
+        @media screen and (min-width: $tablet) {
+            flex-direction: row;
+        }
+    }
+
+    &__contact-wrapper p {
+        max-width: 350px;
+
+        @media screen and (min-width: $tablet) {
+            max-width: 350px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            max-width: 450px;
+        }
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        cursor: pointer;
+        border: none;
+
+        @media screen and (min-width: $tablet) {
+            top: 20px;
+            right: 20px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            top: 30px;
+            right: 30px;
+        }
+    }
+
+    &__close-btn svg {
+        display: block;
+        width: 30px;
+        height: 30px;
+
+        @media screen and (min-width: $tablet) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

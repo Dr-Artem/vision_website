@@ -1,0 +1,67 @@
+.button {
+    display: block;
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-weight: 100;
+    color: var(--muted70-text-color);
+    padding: 14px 36px;
+    border: 1px solid var(--muted70-text-color);
+    border-radius: 70%;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--muted70-text-color);
+    background: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color var(--general-transition-effect), border-color var(--general-transition-effect);
+
+    &:hover,
+    &:focus {
+        color: var(--main-text-color);
+        border-color: var(--main-text-color);
+        text-decoration-color: var(--main-text-color);
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding: 24px 50px;
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 32px 72px;
+        font-size: 20px;
+    }
+}
+.button-icon {
+    display: flex;
+    justify-content: center;
+    min-width: 120px;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 22px;
+    fill: currentColor;
+
+    @media screen and (min-width: $tablet) {
+        padding: 16px 25px;
+        min-width: 280px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 20px 40px;
+        min-width: 360px;
+    }
+}
+.button-icon svg {
+    width: 20px;
+    height: 20px;
+
+    @media screen and (min-width: $tablet) {
+        width: 30px;
+        height: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 40px;
+        height: 40px;
+    }
+}

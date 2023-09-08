@@ -1,0 +1,81 @@
+.swiper {
+    max-width: 200px;
+    max-height: 680px;
+    margin: 0;
+
+    @media screen and (min-width: $tablet) {
+        max-width: 420px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 665px;
+    }
+}
+.swiper .swiper-slide picture {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+.swiper-pagination-bullet:hover {
+    background-color: #000;
+}
+.swiper__buttons {
+    display: flex;
+    gap: 20px;
+    color: var(--muted50-text-color);
+
+    @media screen and (min-width: $tablet) {
+        gap: 50px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        gap: 60px;
+    }
+}
+.swiper__buttons svg {
+    width: 30px;
+    height: 26px;
+    fill: var(--muted50-text-color);
+    cursor: pointer;
+    transition: fill var(--general-transition-effect);
+
+    @media screen and (min-width: $tablet) {
+        width: 40px;
+        height: 36px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 46px;
+        height: 42px;
+    }
+}
+.swiper__buttons svg:hover {
+    fill: #000;
+}
+.swiper-pagination-bullet {
+    opacity: 1;
+    width: 5px;
+    height: 4px;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    transition: width var(--general-transition-effect), background-color var(--general-transition-effect);
+
+    @media screen and (min-width: $tablet) {
+        width: 8px;
+        height: 4px;
+    }
+}
+.swiper-pagination-horizontal {
+    height: 4px;
+    display: flex;
+}
+.swiper-pagination-bullet-active {
+    width: 30px;
+    background-color: #000;
+
+    @media screen and (min-width: $tablet) {
+        width: 50px;
+        height: 4px;
+    }
+}

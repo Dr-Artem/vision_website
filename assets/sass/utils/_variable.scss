@@ -1,0 +1,27 @@
+:root {
+    // font-family
+    --main-font: "Roboto", sans-serif;
+    --accent-font: "Unbounded", sans-serif;
+    --bold-font: "Bruno Ace", sans-serif;
+
+    /* text color */
+    --main-text-color: #000;
+    --muted50-text-color: rgba(0, 0, 0, 0.5);
+    --muted70-text-color: rgba(0, 0, 0, 0.7);
+    --accent-text-color: #013e21;
+    --white-text-color: #fff;
+
+    /* background color */
+    --main-background-color: #fff;
+    --secondary-background-color: #013e21;
+    --black-background-color: #000;
+
+    /* :focus:hover effects */
+    --general-transition-effect: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+$mobile: 320px;
+$pre-tablet: 767.98px;
+$tablet: 768px;
+$pre-desktop: 1279.98px;
+$desktop: 1280px;

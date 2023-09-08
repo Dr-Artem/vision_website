@@ -1,0 +1,174 @@
+.form {
+    &__wrapper {
+        border: 1px solid var(--black-background-color);
+        border-radius: 3px;
+        padding: 20px 20px;
+
+        @media screen and (min-width: $tablet) {
+            padding: 30px 40px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            padding: 60px 80px;
+        }
+    }
+    &__title {
+        font-family: var(--accent-font);
+        color: var(--accent-text-color);
+        font-size: 20px;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 36px;
+            margin-bottom: 35px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+    }
+    &__title--centered {
+        text-align: center;
+    }
+    &__title--70 {
+        font-size: 18px;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 44px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 70px;
+        }
+    }
+    &__text {
+        color: var(--muted70-text-color);
+        font-size: 12px;
+        line-height: 22px;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    &__text span {
+        font-family: var(--bold-font);
+        color: var(--accent-text-color);
+    }
+    &__request-wrapper &__text {
+        max-width: 220px;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $tablet) {
+            min-width: 260px;
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: $desktop) {
+            min-width: 300px;
+        }
+    }
+    &__request-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column-reverse;
+
+        @media screen and (min-width: $tablet) {
+            flex-direction: row;
+        }
+    }
+    &__request-wrapper form {
+        display: flex;
+        flex-direction: column;
+        min-width: 180px;
+
+        @media screen and (min-width: $tablet) {
+            min-width: 260px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            min-width: 340px;
+        }
+    }
+    &__request-wrapper form li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    &__request-wrapper form li:last-child {
+        margin-bottom: 40px;
+    }
+    &__request-wrapper form input,
+    &__subscribe-wrapper form input {
+        font-family: var(--main-font);
+        padding: 10px 0;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        border-bottom: 1px solid var(--black-background-color);
+        width: 100%;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 20px;
+        }
+    }
+    &__subscribe-wrapper form input {
+        min-width: 120px;
+
+        @media screen and (min-width: $tablet) {
+            min-width: 260px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            min-width: 340px;
+        }
+    }
+    &__request-wrapper form input::placeholder,
+    &__subscribe-wrapper form input::placeholder {
+        color: #827c7c;
+        font-weight: 100;
+    }
+    &__subscribe-wrapper form {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+        @media screen and (min-width: $tablet) {
+            gap: 0;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+    }
+    &__btn-wrapper {
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__btn-wrapper li:not(:last-child) {
+        @media screen and (max-width: $pre-tablet) {
+            margin-bottom: 20px;
+        }
+    }
+    &__text-wrapper {
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 50px;
+        }
+    }
+    &__text-wrapper li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}

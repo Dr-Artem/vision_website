@@ -1,0 +1,71 @@
+.hero {
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: $tablet) {
+            gap: 25px;
+            flex-direction: row;
+            margin-bottom: 0;
+        }
+    }
+    &__background {
+        position: relative;
+    }
+    &__background img {
+        min-height: 250px;
+        object-fit: cover;
+    }
+    &__text-wrapper {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+        margin-left: auto;
+        backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.2);
+
+        @media screen and (min-width: $tablet) {
+            padding: 15px 30px;
+            margin: 0 30px 20px 0;
+        }
+
+        @media screen and (min-width: $desktop) {
+            padding: 25px 60px;
+            margin: 0 90px 35px 0;
+        }
+    }
+    &__text {
+        font-size: 12px;
+        font-weight: 400;
+        font-family: var(--main-font);
+        color: var(--white-text-color);
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 20px;
+        }
+    }
+    &__text:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    &__text-wrapper span {
+        font-family: var(--accent-font);
+        font-size: 20px;
+        font-weight: 200;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 30px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 50px;
+        }
+    }
+}

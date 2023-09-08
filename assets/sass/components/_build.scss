@@ -1,0 +1,21 @@
+.build {
+    &__title {
+        margin-bottom: 40px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 60px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 100px;
+        }
+    }
+    &__swiper {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    &__swiper-navigation {
+        display: flex;
+        align-items: center;
+    }
+}

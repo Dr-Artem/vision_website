@@ -1,0 +1,122 @@
+.cottages {
+    &__list > li:not(:last-child) {
+        margin-bottom: 80px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 135px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 185px;
+        }
+    }
+    &__title {
+        margin-bottom: 40px;
+        max-width: min-content;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 70px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 100px;
+        }
+    }
+    &__list > li:nth-child(2) &__title {
+        margin-left: auto;
+    }
+    &__content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 5px;
+    }
+    &__list > li:nth-child(2) &__content-wrapper {
+        flex-direction: row-reverse;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    &__content li {
+        height: 100%;
+        grid-column: span 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+
+        @media screen and (min-width: $tablet) {
+            padding: 0 20px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            padding: 0 30px;
+        }
+    }
+    &__content li:nth-child(1),
+    &__content li:nth-child(2),
+    &__content li:nth-child(3) {
+        border-bottom: 1px solid #000;
+    }
+    &__content li:last-child,
+    &__content li:nth-child(4) {
+        grid-column: span 1;
+    }
+    &__content li:last-child {
+        border-left: 1px solid #000;
+    }
+    &__content li p {
+        font-family: var(--accent-font);
+        font-size: 20px;
+        font-weight: 200;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 48px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 70px;
+        }
+    }
+    &__content li span {
+        font-size: 10px;
+        text-align: center;
+        color: var(--muted50-text-color);
+
+        @media screen and (min-width: $tablet) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            font-size: 20px;
+        }
+    }
+
+    &__swiper-navigation {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        max-width: 190px;
+        bottom: 0;
+
+        @media screen and (min-width: $tablet) {
+            max-width: 420px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            max-width: 665px;
+        }
+    }
+    &__list li:nth-child(2) &__swiper-navigation {
+        flex-direction: row;
+        margin-left: 0;
+    }
+    &__pagination.swiper-pagination-horizontal {
+        width: max-content;
+    }
+}
