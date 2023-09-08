@@ -12,62 +12,67 @@ const phoneClose = document.getElementById("phone-close");
 
 const docWidth = window.innerWidth;
 
-function toggleMenu() {
+menuToggle.addEventListener("click", () => {
     const visible = navigation.getAttribute("data-visible");
-    const isOpen = visible === "true";
 
-    navigation.setAttribute("data-visible", isOpen ? "false" : "true");
-    menuToggle.setAttribute("aria-open", !isOpen);
-    document.body.classList.toggle("is-hidden", isOpen);
-}
-
-menuToggle.addEventListener("click", toggleMenu);
+    if (visible === "false") {
+        navigation.setAttribute("data-visible", "true");
+        menuToggle.setAttribute("aria-open", "true");
+        document.querySelector("body").classList.add("is-hidden");
+    } else if (visible === "true") {
+        navigation.setAttribute("data-visible", "false");
+        menuToggle.setAttribute("aria-open", "false");
+        document.querySelector("body").classList.remove("is-hidden");
+    }
+});
 
 if (docWidth <= 768) {
-    navLinks.forEach((link) => {
+    navLinks.forEach((link) =>
         link.addEventListener("click", () => {
-            toggleMenu();
-        });
-    });
-}
-
-function toggleModal(modal) {
-    if (docWidth <= 768) {
-        toggleMenu();
-    }
-    modal.classList.toggle("active");
-    document.body.classList.toggle("is-hidden");
+            navigation.setAttribute("data-visible", "false");
+            menuToggle.setAttribute("aria-open", "false");
+            document.body.classList.toggle("is-hidden");
+        })
+    );
 }
 
 phoneBtn.addEventListener("click", () => {
-    toggleModal(phoneModal);
+    if (docWidth <= 768) {
+        navigation.setAttribute("data-visible", "false");
+        menuToggle.setAttribute("aria-open", "false");
+    }
+    phoneModal.classList.toggle("active");
+    document.body.classList.add("is-hidden");
 });
 
 telegramBtn.addEventListener("click", () => {
-    toggleModal(telegramModal);
+    if (docWidth <= 768) {
+        navigation.setAttribute("data-visible", "false");
+        menuToggle.setAttribute("aria-open", "false");
+    }
+    telegramModal.classList.toggle("active");
+    document.body.classList.add("is-hidden");
 });
-
-function closeModal(modal) {
-    modal.classList.remove("active");
-    document.body.classList.remove("is-hidden");
-}
 
 phoneModal.addEventListener("click", (event) => {
     if (event.target === phoneModal) {
-        closeModal(phoneModal);
+        phoneModal.classList.toggle("active");
+        document.body.classList.remove("is-hidden");
     }
 });
-
 telegramModal.addEventListener("click", (event) => {
     if (event.target === telegramModal) {
-        closeModal(telegramModal);
+        telegramModal.classList.toggle("active");
+        document.body.classList.remove("is-hidden");
     }
 });
 
 telegramClose.addEventListener("click", () => {
-    closeModal(telegramModal);
+    telegramModal.classList.toggle("active");
+    document.body.classList.remove("is-hidden");
 });
 
 phoneClose.addEventListener("click", () => {
-    closeModal(phoneModal);
+    phoneModal.classList.toggle("active");
+    document.body.classList.remove("is-hidden");
 });
