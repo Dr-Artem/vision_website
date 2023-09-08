@@ -146,6 +146,7 @@
 
         @media screen and (min-width: $tablet) {
             gap: 0;
+            flex-direction: row;
             justify-content: space-between;
             align-items: baseline;
         }
